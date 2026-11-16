@@ -1,0 +1,97 @@
+/* Цвета — токены приложения Eight Stitches (Krestik/Design/Tokens.swift). */
+:root {
+  --bg: #F4F6F8;          /* gray50 */
+  --surface: #FFFFFF;
+  --line: #E7EBEF;        /* gray100 */
+  --text: #1D1C28;        /* gray900 */
+  --text-secondary: #5B6068; /* gray500 */
+  --brand: #449DF7;       /* blue500 */
+  --brand-strong: #2E81E5; /* blue600 */
+  --brand-soft: #E0F2FF;  /* blue100 */
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121119;
+    --surface: #1D1C28;
+    --line: #2C2B38;
+    --text: #F4F6F8;
+    --text-secondary: #A9AEB5;
+    --brand-strong: #7AB6FF;
+    --brand-soft: #16263A;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+.top {
+  background: var(--brand);
+  padding: 24px 16px;
+}
+.top a { display: inline-block; }
+.top img { display: block; height: 36px; width: auto; }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 { font-size: 28px; line-height: 1.25; margin: 8px 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; line-height: 1.3; margin: 32px 0 8px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 20px; margin: 0 0 12px; }
+a { color: var(--brand-strong); }
+
+.meta { color: var(--text-secondary); margin-bottom: 16px; }
+
+.langs { display: flex; gap: 8px; margin: 16px 0 8px; }
+.langs a {
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.card h2:first-child { margin-top: 0; }
+
+.lead {
+  background: var(--brand-soft);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.lead p:last-child { margin-bottom: 0; }
+
+.links { list-style: none; padding: 0; }
+.links li { margin: 0 0 8px; }
+.links a {
+  display: block;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+.links a span { display: block; font-weight: 400; color: var(--text-secondary); font-size: 14px; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+
+footer { color: var(--text-secondary); font-size: 14px; text-align: center; padding: 0 16px 32px; }
